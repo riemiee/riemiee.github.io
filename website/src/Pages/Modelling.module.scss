@@ -1,0 +1,15 @@
+.imagebox {
+  margin-top: 2%;
+  display: flex;
+  width: 35%;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagebox img {
+  object-fit: contain;
+  width: 33%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  cursor: pointer;
+}

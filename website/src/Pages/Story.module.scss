@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleBox {
+  margin-top: 2%;
+  width: 650px;
+  height: 137px;
+  background-color: #D9D9D9;
+  font-family: 'Jost';
+  font-weight: 500;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subtitle {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-family: 'Jost';
+  opacity: 0.6;
+  z-index: -999;
+}

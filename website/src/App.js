@@ -1,25 +1,35 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Story from './Pages/Story';
+import Header from './Components/Header';
+import { useState } from 'react';
+import Modelling from './Pages/Modelling';
+import Animation from './Pages/Animation';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+  const [page, setPage] = useState(0);
+
+  const pageList = [
+    <Story 
+      page={page}
+      setPage={setPage}
+    />,
+    <Modelling 
+      page={page}
+      setPage={setPage}
+    />,
+    <Animation 
+      page={page}
+      setPage={setPage}
+    />
+  ]
+
+  return (<>
+    
+    {pageList[page]}
+    
+  </>);
 }
 
 export default App;
