@@ -16,7 +16,7 @@ const Story = ({ page, setPage }) => {
       
       <span className={style.subtitle}>Storyboard Development</span>
       
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="641" height="361" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
     </div>
   </>)
