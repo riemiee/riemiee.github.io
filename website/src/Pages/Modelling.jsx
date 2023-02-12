@@ -11,14 +11,13 @@ import Modal from "../Components/Modal";
 const Modelling = ({ page, setPage }) => {
 
   const [modal, changeModal] = useState(false);
-  const [modalImage, changeModalImage] = useState(model1);
   const [imageNum, changeImageNum] = useState(0);
   
   const imageArray = [model1, model2, model3]
   
   const showModal = (e) => {
     const imageNum = Number(e.target.getAttribute("data-image"));
-    changeModalImage(imageArray[imageNum]);
+    changeImageNum(imageNum)
     changeModal(true);
   }
 
@@ -44,7 +43,7 @@ const Modelling = ({ page, setPage }) => {
       
       <span className={style.subtitle}>Exterminator Granny</span>
       
-      <iframe width="641" height="361" src="https://www.youtube.com/embed/bq_ryTjIzJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="650" height="361" src="https://www.youtube.com/embed/bq_ryTjIzJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
       <div className={model_style.imagebox}>
         <img src={model1} data-image='0' onClick={showModal}/>

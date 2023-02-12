@@ -15,7 +15,7 @@ const Animation = ({ page, setPage}) => {
       
       <span className={style.subtitle}>Short Animated Film</span>
       
-      <iframe width="641" height="361" src="https://www.youtube.com/embed/6r5LLSmRc3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="650" height="361" src="https://www.youtube.com/embed/6r5LLSmRc3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
     </div>
   </>)
