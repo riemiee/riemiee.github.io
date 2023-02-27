@@ -1,0 +1,52 @@
+.subHead {
+  font-family: 'Jost';
+  float: left;
+  font-weight: 500;
+}
+
+.subText {
+  font-family: 'Jost';
+}
+
+.subHeadBox {
+  padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+}
+
+.imagebox {
+  display: flex;
+  flex-direction: column;
+  width: 641px;
+  height: 421px;
+  justify-content: center;
+  align-items: center;
+}
+
+.miniImage {
+  display: flex;
+  width: 641px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectImg {
+  object-fit: contain;
+  width: 154px;
+  cursor: pointer;
+  object-fit: cover;
+  padding: 1%;
+  opacity: .5;
+}
+
+.select { 
+  opacity: 1;
+}
+
+.gif {
+  width: 651px;
+  height: 421px;
+  object-fit: contain;
+  cursor: pointer;
+}

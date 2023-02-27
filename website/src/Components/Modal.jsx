@@ -5,8 +5,10 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const Modal = ({ changeModal, imageArray, imageNum, changeImageNum }) => {
 
+  const arrLength = imageArray.length;
+
   const updateImageForward = (e) => {
-    if (imageNum === 2) {
+    if (imageNum === arrLength - 1) {
       changeImageNum(0);
     } else {
       changeImageNum(imageNum + 1)
@@ -17,7 +19,7 @@ const Modal = ({ changeModal, imageArray, imageNum, changeImageNum }) => {
   
   const updateImageBackward = (e) => {
     if (imageNum === 0) {
-      changeImageNum(2);
+      changeImageNum(arrLength - 1);
     } else {
       changeImageNum(imageNum - 1)
     }

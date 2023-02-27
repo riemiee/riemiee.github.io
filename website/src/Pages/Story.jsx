@@ -53,9 +53,9 @@ const Story = ({ page, setPage }) => {
       
       <span className={style.subtitle2}>Colour Script</span>
       
-      <img className={style.storyImg} src={story3} data-image='2' onClick={showModal}/>
-      <img className={style.storyImg} src={story4} data-image='3' onClick={showModal}/>
-      <img className={style.storyImg} src={story5} data-image='4' onClick={showModal}/>
+      <img className={style.storyHome} src={story3} data-image='2' onClick={showModal}/>
+      <img className={style.storyHome} src={story4} data-image='3' onClick={showModal}/>
+      <img className={style.storyHome} src={story5} data-image='4' onClick={showModal}/>
       
     </div>
   </>)
