@@ -5,17 +5,22 @@ import Header from './Components/Header';
 import { useState } from 'react';
 import Modelling from './Pages/Modelling';
 import Animation from './Pages/Animation';
+import Design from './Pages/Design';
 
 function App() {
 
   const [page, setPage] = useState(0);
 
   const pageList = [
+    <Modelling
+      page={page}
+      setPage={setPage}
+    />,
     <Story 
       page={page}
       setPage={setPage}
     />,
-    <Modelling 
+    <Design 
       page={page}
       setPage={setPage}
     />,

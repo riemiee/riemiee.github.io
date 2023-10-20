@@ -37,21 +37,22 @@ const Story = ({ page, setPage }) => {
       page={page}
       setPage={setPage}
     />
-    
+
     <div className={style.mainBox}>
-      <div className={style.titleBox}>STORY</div>
       
-      <span className={style.subtitle}>Storyboard Development</span>
+      <span className={style.subtitle}>Storyboards</span>
       
-      <iframe width="650" height="361" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="854" height="540" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       
+      <iframe style={{paddingTop: '2%'}} width="854" height="540" src="https://www.youtube.com/embed/0q8fooo_lsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
       <span className={style.subtitle}>Short Comic</span>
       
       <img className={style.storyImg} src={story1} data-image='0' onClick={showModal}/>
       
       <img className={style.storyImg} src={story2} data-image='1' onClick={showModal}/>
       
-      <span className={style.subtitle2}>Colour Script</span>
+      <span className={style.subtitle}>Colour Script</span>
       
       <img className={style.storyHome} src={story3} data-image='2' onClick={showModal}/>
       <img className={style.storyHome} src={story4} data-image='3' onClick={showModal}/>

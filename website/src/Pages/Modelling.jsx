@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import style from "./Story.module.scss"
+import style from "./Modelling.module.scss"
 import model_style from "./Modelling.module.scss"
 import model1 from '../Media/model_1.jpg'
 import model2 from '../Media/model_2.jpg'
@@ -14,12 +14,15 @@ const Modelling = ({ page, setPage }) => {
   const [imageNum, changeImageNum] = useState(0);
   
   const imageArray = [model1, model2, model3]
-  
+  const [is2d, change2d] = useState(true);
+
   const showModal = (e) => {
     const imageNum = Number(e.target.getAttribute("data-image"));
     changeImageNum(imageNum)
     changeModal(true);
   }
+
+
 
 
   return (<>
@@ -38,19 +41,26 @@ const Modelling = ({ page, setPage }) => {
       setPage={setPage}
     />
   
-    <div className={style.mainBox}>
-      <div className={style.titleBox}>3D Modeling/Rigging/Animation</div>
+    <div className={style.mainBox} style={is2d ? {display: 'flex'} : { display: 'none' } }>
       
-      <span className={style.subtitle}>Exterminator Granny</span>
-      
-      <iframe width="650" height="361" src="https://www.youtube.com/embed/bq_ryTjIzJc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      
-      <div className={model_style.imagebox}>
-        <img src={model1} data-image='0' onClick={showModal}/>
-        <img src={model2} data-image='1' onClick={showModal}/>
-        <img src={model3} data-image='2' onClick={showModal}/>
+      <div className={style.chooseSubtitle}>
+        <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(true) }} >2D Animation Demo Reel</span>
+        <span className={style.subtitle} style={{ opacity: '0.5' }} onClick={() => { change2d(false) }}>3D Animation Demo Reel</span>
       </div>
       
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/XCqEdtsOMmI?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+    </div>
+
+    <div className={style.mainBox} style={is2d ? { display: 'none' } : { display: 'flex' } }>
+
+      <div className={style.chooseSubtitle}>
+        <span className={style.subtitle} style={{ opacity: '0.5' }} onClick={() => { change2d(true) }} >2D Animation Demo Reel</span>
+        <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(false) }} >3D Animation Demo Reel</span>
+      </div>
+
+      <iframe width="854" height="480" src="https://www.youtube.com/embed/jnF6tVMF51I?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
     </div>
   </>)
 }

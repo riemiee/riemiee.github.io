@@ -22,10 +22,11 @@ const Header = ({ page, setPage }) => {
     </div>
     
     <div className={style.bot}>
-      <div className={style.nav} style={page == 0 ? {opacity: 1} : {}} data-page='0' onClick={changePage}>STORY</div>
-      <div className={style.nav} style={page == 1 ? {opacity: 1} : {}} data-page='1' onClick={changePage}>3D</div>
-      <div className={style.nav} style={page == 2 ? {opacity: 1} : {}} data-page='2' onClick={changePage}>ANIMATION</div>
-      <div className={style.nav} style={page == 3 ? {opacity: 1} : {}} data-page='3' onClick={changePage}>ABOUT</div>
+      <div className={style.nav} style={page == 0 ? {opacity: 1} : {}} data-page='0' onClick={changePage}>ANIMATION</div>
+      <div className={style.nav} style={page == 1 ? {opacity: 1} : {}} data-page='1' onClick={changePage}>STORYBOARDS</div>
+      <div className={style.nav} style={page == 2 ? {opacity: 1} : {}} data-page='2' onClick={changePage}>DESIGN</div>
+      <div className={style.nav} style={page == 3 ? {opacity: 1} : {}} data-page='3' onClick={changePage}>PROJECTS</div>
+        <a className={style.nav} href="http://www.linkedin.com/in/rissaputra" target="_blank" style={page == 4 ? { opacity: 1 } : {}} data-page='4'>ABOUT</a>
     </div>
   
   </div>)

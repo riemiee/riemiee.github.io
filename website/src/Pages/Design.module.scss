@@ -1,17 +1,69 @@
 .imagebox {
   margin-top: 2%;
   display: flex;
-  width: 641px;
+  flex-wrap: wrap;
+  width: 860px;
   justify-content: center;
   align-items: center;
 }
 
 .imagebox img {
   object-fit: contain;
-  width: 31.5%;
-  padding-left: 1.5%;
-  padding-right: 1.5%;
-  cursor: pointer;
+  width: 280px;
+  padding: 3px 3px 3px 3px;
+}
+
+.turtle {
+  width: 658px;
+  height: 192px;
+  padding: 3px 3px 3px 3px;
+}
+
+.turtleBox {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 860px;
+}
+
+.visBox {
+  display: flex;
+  padding-bottom: 3%;
+}
+
+.visColumn1 img {
+  object-fit: contain;
+  width: 493px;
+  height: 416px;
+  padding: 3px 3px 3px 3px;
+}
+
+.visColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.visColumn img {
+  object-fit: contain;
+  width: 359px;
+  height: 202px;
+  padding: 3px 3px 3px 3px;
+}
+
+.imgBox {
+  margin-top: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 860px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgBox img {
+  object-fit: contain;
+  width: 280px;
+  height: 158px;
+  padding: 3px 3px 3px 3px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
@@ -52,10 +104,10 @@
   font-size: 20px;
   font-weight: 500;
   transition: opacity 0.5s;
+  padding-top: 2%;
 }
 
 .subtitle:hover {
-  cursor: pointer;
   opacity: 1 !important;
 }
 

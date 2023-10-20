@@ -68,6 +68,12 @@
   transition: opacity 0.5s;
 }
 
+a,
+u {
+  text-decoration: none;
+  color: black;
+}
+
 .nav:hover {
   opacity: 1;
 }
