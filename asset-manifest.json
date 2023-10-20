@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ade77102.css",
-    "main.js": "/static/js/main.05e93a73.js",
+    "main.css": "/static/css/main.e1aa6e8f.css",
+    "main.js": "/static/js/main.414ec5a1.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/anim2.gif": "/static/media/anim2.90c6d55b599119eccbf9.gif",
     "static/media/story_4.jpg": "/static/media/story_4.24b0564ad6028dd899fa.jpg",
@@ -14,19 +14,35 @@
     "static/media/anim3.gif": "/static/media/anim3.a58d739266819cba7847.gif",
     "static/media/model_2.jpg": "/static/media/model_2.fe37a45d737eeb34add8.jpg",
     "static/media/model_1.jpg": "/static/media/model_1.804a74c70e496f3981eb.jpg",
+    "static/media/Wk3 House iteration colour.jpg": "/static/media/Wk3 House iteration colour.7e2666bed8111e61856a.jpg",
+    "static/media/Styleframe_Paint_Story.png": "/static/media/Styleframe_Paint_Story.9808a891069ec58e37d4.png",
     "static/media/anim4.gif": "/static/media/anim4.13ae2dcf8c4789404bc0.gif",
+    "static/media/Wk 4 House Design.png": "/static/media/Wk 4 House Design.3adcdf439f5a31dc9c9e.png",
+    "static/media/Wk4 Character Design 2.png": "/static/media/Wk4 Character Design 2.e748d72fa20221d98827.png",
     "static/media/anim1.png": "/static/media/anim1.2caaaef6733499a204a1.png",
+    "static/media/charapinkified.PNG": "/static/media/charapinkified.7c39eeae0bc4835f3759.PNG",
+    "static/media/RocketRide_Paint_BGs.png": "/static/media/RocketRide_Paint_BGs.afddbc34c12f647d4e4a.png",
     "static/media/anim3.png": "/static/media/anim3.ba97e9bd6eabe3354ab2.png",
+    "static/media/Background_Coloured_Thumbnails2.png": "/static/media/Background_Coloured_Thumbnails2.274ac1abe90f055a5b1a.png",
+    "static/media/WIP_Rissa_Putra.jpg": "/static/media/WIP_Rissa_Putra.be3e8676918264b0008a.jpg",
+    "static/media/RocketRide_Paint_BGs (7).png": "/static/media/RocketRide_Paint_BGs (7).47f75e5dae8d8faa524e.png",
+    "static/media/IMG_1614.PNG": "/static/media/IMG_1614.cdfb7e507ce0fd23be5a.PNG",
+    "static/media/RocketRide_Paint_BGs (3).png": "/static/media/RocketRide_Paint_BGs (3).3e8ecb1066747281e07b.png",
     "static/media/anim2.png": "/static/media/anim2.52211fcf9d3070277f03.png",
+    "static/media/RocketRide_Paint_BGs (2).png": "/static/media/RocketRide_Paint_BGs (2).8bee9240d5096dafa966.png",
+    "static/media/RocketRide_Paint_BGs (5).png": "/static/media/RocketRide_Paint_BGs (5).f825634e8916c9b8b8a4.png",
     "static/media/anim4.png": "/static/media/anim4.12b9e2ecb022d20722eb.png",
+    "static/media/RocketRide_Paint_BGs (4).png": "/static/media/RocketRide_Paint_BGs (4).9a49ee6607f8fdc9c164.png",
+    "static/media/IMG_1615.PNG": "/static/media/IMG_1615.b0696175431c7e8a0deb.PNG",
+    "static/media/RocketRide_Paint_BGs (6).png": "/static/media/RocketRide_Paint_BGs (6).27782d2290650827ee32.png",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.ade77102.css.map": "/static/css/main.ade77102.css.map",
-    "main.05e93a73.js.map": "/static/js/main.05e93a73.js.map",
+    "main.e1aa6e8f.css.map": "/static/css/main.e1aa6e8f.css.map",
+    "main.414ec5a1.js.map": "/static/js/main.414ec5a1.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ade77102.css",
-    "static/js/main.05e93a73.js"
+    "static/css/main.e1aa6e8f.css",
+    "static/js/main.414ec5a1.js"
   ]
 }
