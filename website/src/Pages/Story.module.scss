@@ -49,3 +49,24 @@
   padding-bottom: 2%;
   cursor: pointer;
 }
+
+@media (max-width: 900px) {
+  .storyImg {
+    width: 280px;
+    height: 158px;
+  }
+
+  .storyHome {
+    width: 280px;
+    height: 158px;
+  }
+
+  .subtitle {
+    font-size: .4em;
+  }
+
+  .subtitle2 {
+    font-size: .4em;
+  }
+
+}

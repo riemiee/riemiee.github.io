@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.scss';
-import Story from './Pages/Story';
 import Header from './Components/Header';
 import { useState } from 'react';
-import Modelling from './Pages/Modelling';
-import Animation from './Pages/Animation';
+import Story from './Pages/Story';
+import Modelling from './Pages/Animation';
+import Animation from './Pages/Projects';
 import Design from './Pages/Design';
 
-function App() {
+function Apps() {
 
   const [page, setPage] = useState(0);
 
@@ -16,22 +16,22 @@ function App() {
       page={page}
       setPage={setPage}
     />,
-    <Story 
+    <Story
       page={page}
       setPage={setPage}
     />,
-    <Design 
+    <Design
       page={page}
       setPage={setPage}
     />,
-    <Animation 
+    <Animation
       page={page}
       setPage={setPage}
     />
   ]
 
   return (<>
-    
+
     {pageList[page]}
 
   </>);

@@ -9,11 +9,6 @@
   user-select: none;
 }
 
-.top {
-
-
-}
-
 .curr {
   opacity: 1;
 }
@@ -76,4 +71,51 @@ u {
 
 .nav:hover {
   opacity: 1;
+}
+
+.botMobile {
+  display: none;
+}
+
+
+
+@media (max-width: 900px) {
+  .bot {
+    display: none;
+  }
+
+  .arrow {
+    cursor: pointer;
+  }
+
+  .topSideMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botMobile {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+  }
+
+  .mobileNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s overflow 1s;
+  }
+
+  .dropdown {
+    overflow: visible;
+    height: auto;
+  }
+
+  .droptop {
+    overflow: hidden;
+    height: 0;
+  }
+
 }

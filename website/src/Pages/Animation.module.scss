@@ -1,52 +1,96 @@
-.subHead {
+.imagebox {
+  margin-top: 2%;
+  display: flex;
+  width: 641px;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagebox img {
+  object-fit: contain;
+  width: 31.5%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleBox {
+  margin-top: 2%;
+  width: 650px;
+  height: 137px;
+  background-color: #D9D9D9;
   font-family: 'Jost';
-  float: left;
+  font-weight: 500;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chooseSubtitle {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4%;
+  padding-bottom: 2%;
+  width: 30%;
+  font-family: 'Jost';
+  font-size: 20px;
   font-weight: 500;
 }
 
-.subText {
+.subtitle {
   font-family: 'Jost';
+  font-size: 1em;
+  font-weight: 500;
+  transition: opacity 0.5s;
 }
 
-.subHeadBox {
-  padding-top: 1%;
-  display: flex;
-  flex-direction: column;
-  width: 650px;
-}
-
-.imagebox {
-  display: flex;
-  flex-direction: column;
-  width: 641px;
-  height: 421px;
-  justify-content: center;
-  align-items: center;
-}
-
-.miniImage {
-  display: flex;
-  width: 641px;
-  justify-content: center;
-  align-items: center;
-}
-
-.selectImg {
-  object-fit: contain;
-  width: 154px;
+.subtitle:hover {
   cursor: pointer;
-  object-fit: cover;
-  padding: 1%;
-  opacity: .5;
+  opacity: 1 !important;
 }
 
-.select { 
-  opacity: 1;
+.subtitle2 {
+  padding-bottom: 1%;
+  font-family: 'Jost';
+  opacity: 0.6;
+  z-index: -999;
 }
 
-.gif {
-  width: 651px;
-  height: 421px;
-  object-fit: contain;
+.storyImg {
+  width: 854px;
+  height: 540px;
+  padding-bottom: 2%;
   cursor: pointer;
+}
+
+.storyHome {
+  width: 854px;
+  height: 540px;
+  padding-bottom: 2%;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  iframe {
+    width: 280px;
+    height: 158px;
+  }
+
+  .chooseSubtitle {
+    width: 230px;
+  }
+
+  .subtitle {
+    font-size: .4em;
+  }
 }
