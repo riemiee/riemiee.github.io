@@ -46,7 +46,7 @@ const Story = ({ page, setPage }) => {
       
       <iframe style={{paddingTop: '2%'}} width="854" height="540" src="https://www.youtube.com/embed/0q8fooo_lsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-      <span className={style.subtitle}>Short Comic</span>
+      <span className={style.subtitle2}>Short Comic</span>
       
       <img className={style.storyImg} src={story1} data-image='0' onClick={showModal}/>
       

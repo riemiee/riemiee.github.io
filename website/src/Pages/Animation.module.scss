@@ -41,15 +41,13 @@
   justify-content: space-between;
   padding-top: 4%;
   padding-bottom: 2%;
-  width: 30%;
+  width: 500px;
   font-family: 'Jost';
-  font-size: 20px;
   font-weight: 500;
 }
 
 .subtitle {
   font-family: 'Jost';
-  font-size: 1em;
   font-weight: 500;
   transition: opacity 0.5s;
 }
@@ -88,9 +86,5 @@
 
   .chooseSubtitle {
     width: 230px;
-  }
-
-  .subtitle {
-    font-size: .4em;
   }
 }
