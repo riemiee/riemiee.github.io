@@ -11,7 +11,6 @@
 .imgBox img {
   object-fit: contain;
   width: 280px;
-  height: 158px;
   padding: 3px 3px 3px 3px;
   cursor: pointer;
 }
@@ -140,10 +139,20 @@
   
   .imgBox {
     flex-direction: column;
+    width: 95%;
+  }
+
+  .imgBox img {
+    width: 100%;
   }
 
   .imagebox {
     flex-direction: column;
+    width: 95%;
+  }
+
+  .imagebox img {
+    width: 100%;
   }
 
   .turtleBox {
@@ -152,9 +161,29 @@
 
   .visBox {
     flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
   }
 
   .visColumn {
     align-items: center;
+    width: 100%;
+  }
+  .visColumn img {
+    width: 100%;
+    height: auto;
+  }
+
+  .visColumn1 {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .visColumn1 img {
+    width: 100%;
+    height: auto;
   }
 }

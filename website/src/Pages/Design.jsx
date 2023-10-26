@@ -31,8 +31,6 @@ import Modal from "../Components/Modal";
 
 const Design = ({ page, setPage }) => {
 
-  const [backgroundModal, changeBackgroundModal] = useState(false);
-
   const [modal, changeModal] = useState(false);
   const [imageNum, changeImageNum] = useState(0);
   const [modalArray, changeModalArray] = useState([]);

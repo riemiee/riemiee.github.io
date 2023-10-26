@@ -43,8 +43,9 @@ const Animation = ({ page, setPage }) => {
         <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(true) }} >2D Animation Demo Reel</span>
         <span className={style.subtitle} style={{ opacity: '0.5' }} onClick={() => { change2d(false) }}>3D Animation Demo Reel</span>
       </div>
-      
-      <iframe width="854" height="480" src="https://www.youtube.com/embed/XCqEdtsOMmI?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div className={style.vidWrapper}>
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/XCqEdtsOMmI?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       
     </div>
 
@@ -55,8 +56,9 @@ const Animation = ({ page, setPage }) => {
         <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(false) }} >3D Animation Demo Reel</span>
       </div>
 
-      <iframe width="854" height="480" src="https://www.youtube.com/embed/jnF6tVMF51I?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
+      <div className={style.vidWrapper}>
+        <iframe width="854" height="480" src="https://www.youtube.com/embed/jnF6tVMF51I?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </div>
   </>)
 }

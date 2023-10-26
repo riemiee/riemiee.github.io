@@ -70,8 +70,8 @@ const Header = ({ page, setPage }) => {
     </div>
 
     <div className={style.botMobile}>
-      <div className={style.topSideMobile}>
-        <KeyboardArrowDownIcon className={style.arrow} onClick={dropDown}/>
+      <div className={style.topSideMobile} onClick={dropDown}>
+        <KeyboardArrowDownIcon className={style.arrow}/>
           {firstLink}
       </div>
       <div className={`${style.mobileNav} ${dropping ? style.dropdown : style.droptop}`}>

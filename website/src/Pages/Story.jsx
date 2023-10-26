@@ -40,24 +40,38 @@ const Story = ({ page, setPage }) => {
 
     <div className={style.mainBox}>
       
-      <span className={style.subtitle}>Storyboards</span>
+      <span className={style.subtitle2}>Storyboards</span>
       
-      <iframe width="854" height="540" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      
-      <iframe style={{paddingTop: '2%'}} width="854" height="540" src="https://www.youtube.com/embed/0q8fooo_lsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div className={style.vidWrapper}>
+        <iframe width="854" height="540" src="https://www.youtube.com/embed/3J72vZYVX7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
 
+      <div className={style.vidWrapper}>
+        <iframe style={{paddingTop: '2%'}} width="854" height="540" src="https://www.youtube.com/embed/0q8fooo_lsU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       <span className={style.subtitle2}>Short Comic</span>
+
+
+      <div className={style.imgBox}>
+        <img className={style.storyImg} src={story1} data-image='0' onClick={showModal}/>
+      </div>
+
+      <div className={style.imgBox}>
+        <img className={style.storyImg} src={story2} data-image='1' onClick={showModal}/>
+      </div>
+
+      <span className={style.subtitle2}>Colour Script</span>
       
-      <img className={style.storyImg} src={story1} data-image='0' onClick={showModal}/>
-      
-      <img className={style.storyImg} src={story2} data-image='1' onClick={showModal}/>
-      
-      <span className={style.subtitle}>Colour Script</span>
-      
-      <img className={style.storyHome} src={story3} data-image='2' onClick={showModal}/>
-      <img className={style.storyHome} src={story4} data-image='3' onClick={showModal}/>
-      <img className={style.storyHome} src={story5} data-image='4' onClick={showModal}/>
-      
+      <div className={style.imgBox}>
+        <img className={style.storyHome} src={story3} data-image='2' onClick={showModal}/>
+      </div>
+      <div className={style.imgBox}>
+        <img className={style.storyHome} src={story4} data-image='3' onClick={showModal}/>
+      </div>
+      <div className={style.imgBox}>
+        <img className={style.storyHome} src={story5} data-image='4' onClick={showModal}/>
+      </div>
+
     </div>
   </>)
 }

@@ -81,14 +81,20 @@ const Projects = ({ page, setPage}) => {
     <div className={style.mainBox}>
       <span className={style.subtitle}>Short Animated Film</span>
       
-      <iframe width="650" height="361" src="https://www.youtube.com/embed/6r5LLSmRc3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <div className={style.vidWrapper}>
+        <iframe width="650" height="361" src="https://www.youtube.com/embed/6r5LLSmRc3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
       <div className={styles.subHeadBox}>
         <span className={styles.subHead}>Hard Pressed (2022)</span>
         <span className={styles.subText}>Ego comes across a strange little music box shaped as a house. It won’t play the way they expect it to, even when Ego tries to force it to - rather, they discover that they are the one who must change in order to listen...</span>
       </div>
 
       <span className={style.subtitle}>TV Show Pilot Episodes</span>
-      <iframe width="650" height="361" src="https://www.youtube.com/embed/ExB33aXOV38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      <div className={style.vidWrapper}>
+        <iframe width="650" height="361" src="https://www.youtube.com/embed/ExB33aXOV38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
       <div className={styles.subHeadBox}>
         <span className={styles.subHead}>Rocket Stories (2023)</span>
       </div>
