@@ -38,7 +38,6 @@
 
 .chooseSubtitle {
   display: flex;
-  justify-content: space-between;
   padding-top: 4%;
   padding-bottom: 2%;
   width: 500px;
@@ -51,6 +50,10 @@
   font-family: 'Jost';
   font-weight: 500;
   transition: opacity 0.5s;
+}
+
+.sep {
+  width: 35%;
 }
 
 .subtitle:hover {
@@ -97,7 +100,7 @@
   }
 
   .chooseSubtitle {
-    width: 70%;
+    width: 75%;
     padding-top: 6%;
     padding-bottom: 6%;
   }

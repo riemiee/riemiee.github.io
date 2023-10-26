@@ -41,6 +41,7 @@ const Animation = ({ page, setPage }) => {
       
       <div className={style.chooseSubtitle}>
         <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(true) }} >2D Animation Demo Reel</span>
+        <div className={style.sep} />
         <span className={style.subtitle} style={{ opacity: '0.5' }} onClick={() => { change2d(false) }}>3D Animation Demo Reel</span>
       </div>
       <div className={style.vidWrapper}>
@@ -53,6 +54,7 @@ const Animation = ({ page, setPage }) => {
 
       <div className={style.chooseSubtitle}>
         <span className={style.subtitle} style={{ opacity: '0.5' }} onClick={() => { change2d(true) }} >2D Animation Demo Reel</span>
+        <div className={style.sep} />
         <span className={style.subtitle} style={{ opacity: '1' }} onClick={() => { change2d(false) }} >3D Animation Demo Reel</span>
       </div>
 
