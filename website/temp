@@ -1,0 +1,234 @@
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ ncli cluster info
+
+Cluster Id : cec3603d-5cd9-49e6-ae72-fc98587622b8::3347015204339065528
+Cluster Uuid : cec3603d-5cd9-49e6-ae72-fc98587622b8
+Cluster Name : DDC-PRISMCENTRAL01
+Cluster Version : pc.2022.6.0.1
+Cluster Full Version : el7.3-release-fraser-6.1-stable-d433e53b8b9da4e9d45270e32ca9b8ee3b9fd843
+External IP address : 10.82.60.201
+Cluster FQDN : DDC-PRISMCENTRAL01.tmm.na.corp.toyota.com
+Is LTS : false
+External Data Services... :
+Support Verbosity Level : BASIC_COREDUMP
+Lock Down Status : Disabled
+Password Remote Login ... : Enabled
+Timezone : UTC
+NCC Version : ncc-4.6.4
+Common Criteria Mode : Disabled
+Degraded Node Monitoring : Enabled
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ cs|grep -v UP
+2023-10-24 22:44:55,026Z INFO MainThread zookeeper_session.py:190 cluster is attempting to connect to Zookeeper
+2023-10-24 22:44:55,045Z INFO Dummy-1 zookeeper_session.py:629 ZK session establishment complete, sessionId=0x3891d8ea99e35e0, negotiated timeout=20 secs
+2023-10-24 22:44:55,061Z INFO MainThread cluster:2918 Executing action status on SVMs 10.82.60.202,10.82.60.203,10.82.60.204
+The state of the cluster: start
+Lockdown mode: Disabled
+
+CVM: 10.82.60.202 Up
+
+CVM: 10.82.60.203 Up, ZeusLeader
+
+CVM: 10.82.60.204 Up
+2023-10-24 22:45:00,305Z INFO MainThread cluster:3079 Success!
+
+
+# NCC Health Check
+
+
+Running : health_checks pcvm_checks pc_fs_inconsistency_check
+[==================================================] 100%
+/health_checks/pcvm_checks/pc_fs_inconsistency_check [ FAIL ]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Detailed information for pc_fs_inconsistency_check:
+Node 10.82.60.203:
+FAIL: EXT4-fs errors found in devices: sdn, sdk on the filesystem. Review dmesg output for EXT4-fs error details.
+Node 10.82.60.204:
+FAIL: EXT4-fs errors found in devices: sdn, sdk on the filesystem. Review dmesg output for EXT4-fs error details.
+Node 10.82.60.202:
+FAIL: EXT4-fs errors found in devices: sdl on the filesystem. Review dmesg output for EXT4-fs error details.
+Refer to KB 9622 (http://portal.nutanix.com/kb/9622) for details on pc_fs_inconsistency_check or Recheck with: ncc health_checks pcvm_checks pc_fs_inconsistency_check --cvm_list=10.82.60.203,10.82.60.204,10.82.60.202
++-----------------------+
+| State | Count |
++-----------------------+
+| Fail | 1 |
+| Total Plugins | 1 |
++-----------------------+
+Plugin output written to /home/nutanix/data/logs/ncc-output-latest.log
+
+
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ allssh uptime
+================== 10.82.60.203 =================
+22:48:10 up 113 days, 1:53, 1 user, load average: 13.75, 14.84, 16.66
+================== 10.82.60.204 =================
+22:48:10 up 113 days, 1:53, 1 user, load average: 11.11, 13.67, 14.41
+================== 10.82.60.202 =================
+22:48:11 up 113 days, 1:54, 2 users, load average: 10.66, 11.24, 11.78
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ df -h
+Filesystem Size Used Avail Use% Mounted on
+devtmpfs 30G 0 30G 0% /dev
+tmpfs 30G 56K 30G 1% /dev/shm
+tmpfs 30G 5.5M 30G 1% /run
+tmpfs 30G 0 30G 0% /sys/fs/cgroup
+/dev/sdb2 9.8G 7.3G 2.5G 76% /
+/dev/sdb3 50G 38G 12G 77% /home
+/dev/sdi 98G 19G 75G 21% /home/nutanix/data/sys-storage/NFS_4_0_598590_9523459a_6100_435d_be30_0695d1b2fd7e
+/dev/sdh 30G 44M 28G 1% /home/nutanix/upgrade
+tmpfs 6.7G 0 6.7G 0% /run/user/1000
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/9db98fbd6c73bd0154c331e8f1acc2d2110f76eb612fdc4d9f3f58bd7f09fe0b/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/485f90db3a37b7c0fbe8c7c8915381a60f030d2c32080e86d714b5acca05627e/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/b2fed8f7d604e5b4d60478c7e6d64ab324312d2e0555431896293678a2803d9b/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/b27f36ab5cc43418db9bbe7f2851439c2bb1c31f00bce9a72f353c484f9fdba1/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/3163755f3fb0cafdf5c82223399802add9112aaa7ea91905845c838bb05b9b72/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/da814f4b1888b10dc4657f5a44cf88b2ff5616e6df7361a7d57faa890807728d/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/471687997ce7ecc26f964a577754f65976a9b971892a8fe108b33641199fc83c/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/e0686ab9e54ce3a422322f6325bc552b7cdb4566bd0f8d771c2e3efe2b7ad805/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/edae43e5f4804257ec180391418863f8653d8ee46efa9748cf35449bd21127c9/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/25363f128511cdd5db37516d9fb156d8892f852b16064e7d2124f118fc4fa700/mounts/shm
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/e61dff1a791610edf8c1c87c201860c53e402210822f7d9bbdb3ebe3c6da6914/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/a17a8a37b836ad7d28a09a38595f3489905f0f789ae5026d10f9b99b132dfbe0/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/9ee9d239712f45db6488660796f9565d7c9ba85f92f0b3f68162ba033fa53713/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/42941543e381713c25ca57d1e9846176b86b3b169774a783ba96da17999c0f87/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/9c7bc5eb99d7d6f0043dbdaa0c5a7c4e9aeaffd09f0d0e3035af7cc032e5182b/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/e9148ed22526637d2a241df03c0ade303d26686067744319ed96de18cf586220/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/04cdf2a48b418eb29c39e644fd5f74216c3f1cd331955e06d65a5cc99fd9fc6e/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/dccdec7a26076685121a983a179a56a5804826d6669f27e975497b33f8323e1f/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/c07e06a5c36f5cae22e24f81f0e066db17d535a8a5463362d3bc964f6bf92a47/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/593b8320e755677eacfc81fbd4a67f3fb7611bf1ce609ccbf53cb6a68e3bcc48/merged
+/dev/sdf1 2.5T 174G 2.3T 8% /home/nutanix/data/stargate-storage/disks/NFS_4_0_496339_77c1fc5a_3b38_4ba2_86f3_196b5df1c37f
+/dev/sdg1 2.5T 29G 2.4T 2% /home/nutanix/data/stargate-storage/disks/NFS_4_0_496342_ec6e7e8a_1abb_47da_a20e_faebafea89d0
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/1c06f21745937601cd35868c18af313261e4788c862319f4f90a3892183186b9/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/23e4e0f00e9fdeccd108a6d01653c28e4488b04da86c2ee74fbcb74d80d45be3/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/61e1b584304ab993aeba468b459ab3139e352b1a25568981e746216ca2e3314f/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/f17f0ff13013ce23f1da5a53ffd01fbb8ed216475591ae6135988eddb8d06b7d/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/5c70da85c067a2f3655a310a0b0cfcbb5e7cd06acd957aac7161bc144f3401bd/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/c0f0a016acbe6619f63090feb607cf13aee2cf12aec61e58c245eb92d40c06f8/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/3e80ed54fcc3a9b20a6f1e885706f265db15efb51425733f38a0d065ead32a3f/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/027f2ae070693b4c3782153c9bcdab6726cd8f1703162ea4377db86aa63d172c/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/41b482cadbede754285f754f4f58bffafb36994ba61a419ec35919b2e7ae8cd2/merged
+/dev/sde1 2.5T 192G 2.2T 8% /home/nutanix/data/stargate-storage/disks/NFS_4_0_496337_120f497d_b676_4c03_a69f_65170d765249
+/dev/sdc1 2.5T 68G 2.4T 3% /home/nutanix/data/stargate-storage/disks/NFS_4_0_496326_fc4eff8a_6ba6_4475_887d_c97d0e6f9963
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/bc2b8cb04a99bae4a9e3a425b11e3137feb9e78bf3ffdf4f8d97dafd01441722/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/53b985d766ca037cad5db221f07634c434c345450679fcda27a311e70d9a5198/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/79adcab7ebb66f861a164113cf09a7e054b21ec10fd43c39aa21d6f300a17c9f/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/c7704cde29304fdebf4d3fc17571f4461b2e60c1172b813e559d4ad3759ae07c/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/28b9ca75787cb2ea297abe5d54c8a9b6f98f9ccc4980662fcaff02d47c026120/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/2817c80fabc6646bf4038f5164f15e17df185a49e3d5529eb12e9f215cc0c828/merged
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/c6aa392e05425749e0eb736110c90d738458610acc0d8132de82738d89c0f814/merged
+shm 64M 12K 64M 1% /home/docker/docker-latest/containers/5f77943bc6e0da96666613e7d4a45ae041b4fa1c2325a24576b9f80d218019b9/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/ca490a36f9a86b6f6df20b48644d50b299c2dd0a2a8d908265a600cbc22b310b/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/7939a5033e8280dab3bddafc24b4afc40f2a7af53de559c3fce77970e43b5d36/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/6d1b5f613746c50af8a7d0d1c6d749a0392002b2127a0bd767f69508cd0fe694/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/0eeb02c5261445e067e3a533681464f47e8a293d2460c7a466ecac0365d59927/mounts/shm
+overlay 98G 19G 75G 21% /home/docker/docker-latest/overlay2/e3875c4bcb73229cf863587800e6a8f7764f3bfaa6ec8a453d602848748e4ba8/merged
+shm 64M 0 64M 0% /home/docker/docker-latest/containers/f775b61d9f8c66592fe71f0d8bee533b85c1a85eb1ff0ab79031645420674975/mounts/shm
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ egrep -H "^" `ls /sys/fs/ext4/*/errors_count`
+/sys/fs/ext4/sdb2/errors_count:0
+/sys/fs/ext4/sdb3/errors_count:0
+/sys/fs/ext4/sdc1/errors_count:0
+/sys/fs/ext4/sde1/errors_count:0
+/sys/fs/ext4/sdf1/errors_count:0
+/sys/fs/ext4/sdg1/errors_count:0
+/sys/fs/ext4/sdh/errors_count:0
+/sys/fs/ext4/sdi/errors_count:0
+/sys/fs/ext4/sdj/errors_count:0
+/sys/fs/ext4/sdk/errors_count:0
+/sys/fs/ext4/sdl/errors_count:2
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ for i in `sudo blkid | awk -F : '!/xfs|iso9660/{print $1}'`;do echo $i;sudo tune2fs -l $i | egrep 'Filesystem state|Last checked|Maximum|error|orphan';done
+/dev/sde1
+Filesystem state: clean
+Maximum mount count: 23
+Last checked: Mon Jul 3 20:56:28 2023
+/dev/sdh
+Filesystem state: clean
+Maximum mount count: 25
+Last checked: Mon May 8 12:40:59 2023
+/dev/sdg1
+Filesystem state: clean
+Maximum mount count: 21
+Last checked: Mon Jul 3 20:56:28 2023
+/dev/sdf1
+Filesystem state: clean
+Maximum mount count: 25
+Last checked: Mon Jul 3 20:56:28 2023
+/dev/sdi
+Filesystem state: clean
+Maximum mount count: 36
+Last checked: Fri Jan 13 22:10:29 2023
+First orphan inode: 5242906
+/dev/sda1
+Filesystem state: clean
+Maximum mount count: -1
+Last checked: Tue Aug 13 18:19:40 2019
+/dev/sdb1
+Filesystem state: clean
+Maximum mount count: -1
+Last checked: Wed Jun 15 06:29:21 2022
+/dev/sdb2
+Filesystem state: clean
+Maximum mount count: 1
+Last checked: Mon Jul 3 20:54:11 2023
+First orphan inode: 137520
+/dev/sdb3
+Filesystem state: clean
+Maximum mount count: -1
+Last checked: Wed Jun 15 06:29:22 2022
+First orphan inode: 662493
+/dev/sdc1
+Filesystem state: clean
+Maximum mount count: 29
+Last checked: Mon Jul 3 20:56:28 2023
+/dev/sdj
+Filesystem state: clean
+Maximum mount count: 24
+Last checked: Mon Jul 3 20:55:18 2023
+/dev/sdk
+Filesystem state: clean
+Maximum mount count: -1
+Last checked: Mon Jul 3 21:07:19 2023
+
+
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ lsblk
+NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda 8:0 0 15M 0 disk
+└─sda1 8:1 0 14M 0 part
+sdb 8:16 0 70G 0 disk
+├─sdb1 8:17 0 10G 0 part
+├─sdb2 8:18 0 10G 0 part /
+└─sdb3 8:19 0 50G 0 part /home
+sdc 8:32 0 2.5T 0 disk
+└─sdc1 8:33 0 2.5T 0 part /home/nutanix/data/stargate-storage/disks/NFS_4_0_496326_fc4eff8a_6ba6_4475_887d_c97d0e6f9963
+sdd 8:48 0 357.1G 0 disk
+sde 8:64 0 2.5T 0 disk
+└─sde1 8:65 0 2.5T 0 part /home/nutanix/data/stargate-storage/disks/NFS_4_0_496337_120f497d_b676_4c03_a69f_65170d765249
+sdf 8:80 0 2.5T 0 disk
+└─sdf1 8:81 0 2.5T 0 part /home/nutanix/data/stargate-storage/disks/NFS_4_0_496339_77c1fc5a_3b38_4ba2_86f3_196b5df1c37f
+sdg 8:96 0 2.5T 0 disk
+└─sdg1 8:97 0 2.5T 0 part /home/nutanix/data/stargate-storage/disks/NFS_4_0_496342_ec6e7e8a_1abb_47da_a20e_faebafea89d0
+sdh 8:112 0 30G 0 disk /home/nutanix/upgrade
+sdi 8:128 0 100G 0 disk /home/nutanix/data/sys-storage/NFS_4_0_598590_9523459a_6100_435d_be30_0695d1b2fd7e
+sdj 8:144 0 100G 0 disk /home/docker/docker-latest/plugins/94b9d468fc7f57df99b1b07aa15f8c2af5350003c59ccd2e42343560cbadcb37/propagated-mount/prism-central-88fa39-DD
+sdk 8:160 0 100G 0 disk /home/docker/docker-latest/plugins/94b9d468fc7f57df99b1b07aa15f8c2af5350003c59ccd2e42343560cbadcb37/propagated-mount/registry-88fa394d-9311-
+sdl 8:176 0 10G 0 disk /home/docker/docker-latest/plugins/d86bf046a1ad79caeb3dff349e50a30b398ef0b81f51559de0a1a7c6d21bc774/propagated-mount/calm-7ff066c2
+sr0 11:0 1 366K 0 rom
+
+
+nutanix@NTNX-10-82-60-202-A-PCVM:~$ findmnt /dev/sdl
+TARGET SOURCE FSTYPE OPTIONS
+/home/nutanix/data/sys-storage/NFS_4_0_598590_9523459a_6100_435d_be30_0695d1b2fd7e/docker/docker-latest/plugins/d86bf046a1ad79caeb3dff349e50a30b398ef0b81f51559de0a1a7c6d21bc774/propagated-mount/calm-7ff066c2
+/dev/sdl ext4 ro,relatime,secla
+/home/nutanix/data/sys-storage/NFS_4_0_598590_9523459a_6100_435d_be30_0695d1b2fd7e/docker/docker-latest/plugins/d86bf046a1ad79caeb3dff349e50a30b398ef0b81f51559de0a1a7c6d21bc774/propagated-mount/calm-7ff066c2
+/dev/sdl ext4 ro,relatime,secla
+/home/docker/docker-latest/plugins/d86bf046a1ad79caeb3dff349e50a30b398ef0b81f51559de0a1a7c6d21bc774/propagated-mount/calm-7ff066c2 /dev/sdl ext4 ro,relatime,secla
+/home/docker/docker-latest/plugins/d86bf046a1ad79caeb3dff349e50a30b398ef0b81f51559de0a1a7c6d21bc774/propagated-mount/calm-7ff066c2 /dev/sdl ext4 ro,relatime,secla

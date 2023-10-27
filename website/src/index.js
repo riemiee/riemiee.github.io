@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  Routes, Route, HashRouter
+} from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Story from './Pages/Story';
@@ -10,14 +12,15 @@ import Design from './Pages/Design';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Animation />} />
         <Route path="/storyboard" element={<Story />} />
         <Route path="/design" element={<Design />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path='*' component={<Animation />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
