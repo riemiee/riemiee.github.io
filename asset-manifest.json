@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c61e4612.css",
-    "main.js": "/static/js/main.783ec0db.js",
+    "main.css": "/static/css/main.a2f78adb.css",
+    "main.js": "/static/js/main.6f729018.js",
     "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
     "static/media/anim2.gif": "/static/media/anim2.90c6d55b599119eccbf9.gif",
     "static/media/story_4.jpg": "/static/media/story_4.24b0564ad6028dd899fa.jpg",
@@ -37,12 +37,12 @@
     "static/media/IMG_1615.PNG": "/static/media/IMG_1615.b0696175431c7e8a0deb.PNG",
     "static/media/RocketRide_Paint_BGs (6).png": "/static/media/RocketRide_Paint_BGs (6).27782d2290650827ee32.png",
     "index.html": "/index.html",
-    "main.c61e4612.css.map": "/static/css/main.c61e4612.css.map",
-    "main.783ec0db.js.map": "/static/js/main.783ec0db.js.map",
+    "main.a2f78adb.css.map": "/static/css/main.a2f78adb.css.map",
+    "main.6f729018.js.map": "/static/js/main.6f729018.js.map",
     "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c61e4612.css",
-    "static/js/main.783ec0db.js"
+    "static/css/main.a2f78adb.css",
+    "static/js/main.6f729018.js"
   ]
 }
