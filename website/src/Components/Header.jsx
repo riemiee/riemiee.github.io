@@ -13,7 +13,7 @@ const Header = ({ page, setPage }) => {
         <NavLink className={style.nav} to='/'>ANIMATION</NavLink >,
         <NavLink className={style.nav} to='/storyboard'>STORYBOARDS</NavLink >,
         <NavLink className={style.nav} to='/design'>DESIGN</NavLink >,
-        <NavLink className={style.nav} to='/visual_design'>VISUAL DESIGN</NavLink >,
+        <NavLink className={style.nav} to='/visual_design'>GRAPHIC DESIGN</NavLink >,
         <NavLink className={style.nav} to='/projects'>PROJECTS</NavLink >]
   );
 
@@ -74,7 +74,7 @@ const Header = ({ page, setPage }) => {
       <NavLink className={style.nav} to='/'>ANIMATION</NavLink >
       <NavLink className={style.nav} to='/storyboard'>STORYBOARDS</NavLink >
       <NavLink className={style.nav} to='/design'>DESIGN</NavLink >
-      <NavLink className={style.nav} to='/visual_design'>VISUAL DESIGN</NavLink >
+      <NavLink className={style.nav} to='/visual_design'>GRAPHIC DESIGN</NavLink >
       <NavLink className={style.nav} to='/projects'>PROJECTS</NavLink >
       <a className={style.nav} href="http://www.linkedin.com/in/rissaputra" target="_blank" style={page == 4 ? { opacity: 1 } : {}} data-page='4'>ABOUT</a>
     </div>
