@@ -13,6 +13,7 @@ const Header = ({ page, setPage }) => {
         <NavLink className={style.nav} to='/'>ANIMATION</NavLink >,
         <NavLink className={style.nav} to='/storyboard'>STORYBOARDS</NavLink >,
         <NavLink className={style.nav} to='/design'>DESIGN</NavLink >,
+        <NavLink className={style.nav} to='/visual_design'>VISUAL DESIGN</NavLink >,
         <NavLink className={style.nav} to='/projects'>PROJECTS</NavLink >]
   );
 
@@ -36,9 +37,17 @@ const Header = ({ page, setPage }) => {
         setFirstLink(teempArray[0])
         console.log(navArray[0])
         break;
+      case '/design':
+        let teempArrayy = navArray;
+        let indexxx = 3;
+        teempArrayy.unshift(teempArrayy.splice(indexxx, 1)[0]);
+        setNavArray(teempArrayy)
+        setFirstLink(teempArrayy[0])
+        console.log(navArray[0])
+        break;
       case '/projects':
         let tempArraay = navArray;
-        let indeex = 3;
+        let indeex = 4;
         tempArraay.unshift(tempArraay.splice(indeex, 1)[0]);
         setNavArray(tempArraay)
         setFirstLink(tempArraay[0])

@@ -28,6 +28,11 @@
 
 @media (max-width: 900px) {
   
+  .pdf {
+    width: 92%;
+    height: 600px;
+  }
+
   .imgBox {
     flex-direction: column;
     width: 95%;
