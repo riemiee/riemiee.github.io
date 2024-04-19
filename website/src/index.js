@@ -9,6 +9,7 @@ import Story from './Pages/Story';
 import Animation from './Pages/Animation';
 import Projects from './Pages/Projects';
 import Design from './Pages/Design';
+import Visual from './Pages/Visual';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/" element={<Animation />} />
         <Route path="/storyboard" element={<Story />} />
         <Route path="/design" element={<Design />} />
+        <Route path="/visual_design" element={<Visual />} />
         <Route path="/projects" element={<Projects />} />
         <Route path='*' component={<Animation />} />
       </Routes>

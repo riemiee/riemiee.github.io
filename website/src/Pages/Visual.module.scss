@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
+
+.mainBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-family: 'Jost';
+  font-size: 20px;
+  font-weight: 500;
+  transition: opacity 0.5s;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.subtitle:hover {
+  opacity: 1 !important;
+}
+
+.pdf {
+  width: 1500px;
+  height: 800px;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  
+  .imgBox {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .imgBox img {
+    width: 100%;
+  }
+
+  .imagebox {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .turtleBox {
+    width: 95%;
+  }
+
+  .turtle {
+    width: 100%;
+  }
+
+  .imagebox img {
+    width: 100%;
+  }
+
+  .turtleBox {
+    justify-content: center;
+  }
+
+  .visBox {
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .visColumn {
+    align-items: center;
+    width: 100%;
+  }
+  .visColumn img {
+    width: 100%;
+    height: auto;
+  }
+
+  .visColumn1 {
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .visColumn1 img {
+    width: 100%;
+    height: auto;
+  }
+}
