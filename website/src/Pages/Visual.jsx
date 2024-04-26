@@ -17,7 +17,7 @@ const Visual = ({ page, setPage }) => {
   
     <div className={style.mainBox}>
       
-      <span className={style.subtitle}>Loreal Brandstorm Project</span>
+      <span className={style.subtitle}>L'Oréal Brandstorm Project</span>
       
       <object data={pdf} className={style.pdf} />
       
